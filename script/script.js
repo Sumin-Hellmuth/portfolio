@@ -59,5 +59,21 @@ setInterval(function(){
     $("#slider > img").eq(sliderIndex).animate({top:"0"});
 
 },3000);
+        
+        $("#m-slider > img").eq(0).siblings().css("top","-678px");
+
+var sliderIndex = 0;
+
+setInterval(function(){
+    if(sliderIndex<2){
+        sliderIndex++
+    }else{
+        sliderIndex=0;
+    }
+    $("#m-slider > img").eq(sliderIndex).siblings().animate({top:"-678px"});
+    $("#m-slider > img").eq(sliderIndex).animate({top:"0"});
+
+},3000);
+
 
 });
